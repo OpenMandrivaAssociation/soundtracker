@@ -12,7 +12,6 @@ Url: 		http://www.soundtracker.org/
 Source: 	http://soundtracker.org/dl/v0.6/%name-%version.tar.bz2
 Patch0: 	soundtracker-0.6.8-remove-chown.patch.bz2
 Patch1:		soundtracker-0.6.8-xdg.patch.bz2
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	SDL-devel
 BuildRequires:	libgnome-devel
 BuildRequires:  gdk-pixbuf-devel
