@@ -50,16 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %find_lang %{name}
 mv %buildroot%_datadir/gnome/apps/Multimedia %buildroot%_datadir/applications
 
-mkdir -p %buildroot%_menudir
-cat > %buildroot%_menudir/%{name} <<EOF
-?package(%{name}):\
-command="%_bindir/soundtracker"\
-title="Soundtracker"\
-longtitle="A module tracker"\
-needs="x11"\
-icon="sound_section.png"\
-section="Multimedia/Sound" xdg="true"
-EOF
 
 %post
 %{update_menus}
@@ -75,7 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc ABOUT-NLS FAQ NEWS TODO README ChangeLog
 %_bindir/soundtracker
-%_menudir/*
 %_datadir/applications/soundtracker.desktop
 %_datadir/%name
 
