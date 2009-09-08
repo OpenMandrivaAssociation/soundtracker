@@ -1,6 +1,6 @@
 %define name soundtracker
 %define version 0.6.8
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary: 	Sound modules editor/player
 Name: 		%{name}
