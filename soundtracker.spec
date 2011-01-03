@@ -1,6 +1,6 @@
 %define name soundtracker
 %define version 0.6.8
-%define release %mkrel 8
+%define release %mkrel 9
 
 Summary: 	Sound modules editor/player
 Name: 		%{name}
@@ -19,7 +19,7 @@ BuildRequires:  gdk-pixbuf-devel
 BuildRequires:  libsndfile-devel
 BuildRequires:  libalsa-devel
 BuildRequires:  libjack-devel
-BuildRequires:  automake1.7
+BuildRequires:  automake
 BuildRequires:  gettext-devel
 
 %description
@@ -33,8 +33,8 @@ interface makes use of GTK+, and, optionally, GNOME.
 %patch1 -p1 -b .xdg
 
 %build
-aclocal-1.7 -I m4
-automake-1.7
+aclocal -I m4
+automake
 autoheader
 autoconf
 %configure2_5x \
