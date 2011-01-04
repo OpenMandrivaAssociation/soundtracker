@@ -12,6 +12,7 @@ Url: 		http://www.soundtracker.org/
 Source: 	http://soundtracker.org/dl/v0.6/%name-%version.tar.bz2
 Patch0: 	soundtracker-0.6.8-remove-chown.patch.bz2
 Patch1:		soundtracker-0.6.8-xdg.patch.bz2
+Patch2:		soundtracker-0.6.8-autopoo_fixes.diff
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	SDL-devel
 BuildRequires:	libgnome-devel
@@ -31,12 +32,14 @@ interface makes use of GTK+, and, optionally, GNOME.
 %setup -q
 %patch0 -p1 -b .chown
 %patch1 -p1 -b .xdg
+%patch2 -p0
 
 %build
-aclocal -I m4
-automake
-autoheader
-autoconf
+autoreconf -fi
+#aclocal -I m4
+#automake
+#autoheader
+#autoconf
 %configure2_5x \
 %ifarch %ix86
 --enable-asm
