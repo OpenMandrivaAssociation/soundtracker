@@ -14,6 +14,9 @@ Patch0: 	soundtracker-0.6.8-remove-chown.patch.bz2
 Patch1:		soundtracker-0.6.8-xdg.patch.bz2
 Patch2:		soundtracker-0.6.8-autopoo_fixes.diff
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	SDL-devel
 BuildRequires:	libgnome-devel
 BuildRequires:  gdk-pixbuf-devel
